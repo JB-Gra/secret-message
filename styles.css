@@ -31,6 +31,8 @@ body,
 body {
   background: var(--main-bg-color);
   color: var(--main-text-color);
+  position: relative;
+  min-height: 100vh;
 }
 
 .cabecera {
@@ -44,26 +46,82 @@ body {
   height: 2.25rem;
 }
 
+.contenido {
+  margin: 1rem;
+  padding-bottom: 2rem;
+}
+
+.entrada__descripcion,
+.entrada__area-texto,
+.salida__descripcion, 
+.salida__alerta-mensaje {
+  font-size: 1.25rem;
+}
+
+.entrada__descripcion,
+.salida__descripcion {
+  margin-bottom: 1rem;
+}
+
 .entrada__descripcion {
   text-align: center;
-  font-size: 1.25rem;
-  margin: 1rem;
 }
 
 .entrada__area-texto {
-  width: 20rem;
+  width: 100%;
   height: 18rem;
   border: none;
+  resize: none;
   background: var(--second-bg-color);
-  font-size: 1.25rem;
   color: var(--main-text-color);
   padding: 1rem;
+  border-radius: 12px;
+}
+
+.entrada__area-texto:focus {
+  outline: none;
 }
 
 .entrada__area-texto::placeholder {
+  font-style: italic;
   color: var(--main-highlight-color);
 }
 
+.btn-contenedor {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 9.75rem;
+  height: 3rem;
+  background: var(--main-highlight-color);
+  font-size: 1.25rem;
+  color: var(--main-text-color);
+  margin: 1rem 0;
+  border: none;
+  border-radius: 12px;
+}
+
+.salida__descripcion {
+  font-weight: 600;
+}
+
+.salida__alerta {
+  display: flex;
+  gap: 1rem;
+  background: var(--second-highlight-color);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.salida__alerta-img {
+  width: 3.5rem;
+}
+
 .pie-pagina {
-  justify-self: end;
+  height: 2rem;
+  position: absolute;
+  bottom: 0;
 }
