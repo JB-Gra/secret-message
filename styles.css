@@ -1,0 +1,69 @@
+*, *::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Chakra Petch', Helvetica, sans-serif;
+}
+
+:root {
+  --main-bg-color: #003A52;
+  --second-bg-color: #002B3D;
+  --third-bg-color: #DEE7F7;
+  --main-text-color: #FFFFFF;
+  --second-text-color: #04080F;
+  --main-highlight-color: #267DA2;
+  --second-highlight-color: #EF233C;
+}
+
+body,
+.cabecera,
+.contenido {
+  display: flex;
+  align-items: center;
+}
+
+body,
+.contenido {
+  flex-flow: column;
+}
+
+body {
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.cabecera {
+  width: 100%;
+  justify-content: center;
+  background: var(--second-bg-color);
+  padding: 1rem 0;
+}
+
+.cabecera__logo {
+  height: 2.25rem;
+}
+
+.entrada__descripcion {
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 1rem;
+}
+
+.entrada__area-texto {
+  width: 20rem;
+  height: 18rem;
+  border: none;
+  background: var(--second-bg-color);
+  font-size: 1.25rem;
+  color: var(--main-text-color);
+  padding: 1rem;
+}
+
+.entrada__area-texto::placeholder {
+  color: var(--main-highlight-color);
+}
+
+.pie-pagina {
+  justify-self: end;
+}
