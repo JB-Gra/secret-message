@@ -67,15 +67,19 @@ body {
   text-align: center;
 }
 
-.entrada__area-texto {
-  width: 100%;
+.entrada__area-texto,
+.salida__mensaje {
   height: 18rem;
   border: none;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.entrada__area-texto {
+  width: 100%;
   resize: none;
   background: var(--second-bg-color);
   color: var(--main-text-color);
-  padding: 1rem;
-  border-radius: 12px;
 }
 
 .entrada__area-texto:focus {
@@ -94,7 +98,7 @@ body {
 }
 
 .btn {
-  width: 9.75rem;
+  width: 9rem;
   height: 3rem;
   background: var(--main-highlight-color);
   font-size: 1.25rem;
@@ -118,6 +122,20 @@ body {
 
 .salida__alerta-img {
   width: 3.5rem;
+}
+
+.salida__resultado {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.salida__mensaje {
+  width: 100%;
+  margin-top: 1rem;
+  background: var(--third-bg-color);
+  color: var(--main-bg-color);
 }
 
 .pie-pagina {
