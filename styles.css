@@ -54,7 +54,9 @@ body {
 .entrada__descripcion,
 .entrada__area-texto,
 .salida__descripcion, 
-.salida__alerta-mensaje {
+.salida__alerta-mensaje,
+.salida__resultado-texto,
+.salida__resultado-espera {
   font-size: 1.25rem;
 }
 
@@ -115,6 +117,9 @@ body {
 
 .salida__alerta {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   gap: 1rem;
   background: var(--second-highlight-color);
   padding: 1rem;
@@ -123,6 +128,11 @@ body {
 
 .salida__alerta-img {
   width: 3.5rem;
+}
+
+.salida__alerta-mensaje,
+.salida__resultado-espera {
+  text-align: center;
 }
 
 .salida__resultado {
@@ -134,9 +144,14 @@ body {
 
 .salida__mensaje {
   width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 1rem;
   background: var(--third-bg-color);
   color: var(--main-bg-color);
+  overflow: scroll;
 }
 
 .pie-pagina {
