@@ -2,23 +2,32 @@ const entradaTexto = document.getElementById("entrada-texto");
 const resultadoTexto = document.getElementById("resultado-texto");
 const btnEncriptado = document.getElementById("encriptado");
 const btnDesencriptado = document.getElementById("desencriptado");
-const areaMensaje = document.getElementById("resultado-texto");
 const mensajeEspera = document.getElementById("esperando-mensaje");
 const btnCopiar = document.getElementById("btn-copiar");
 let textoNuevo = document.createElement("p");
 
 btnEncriptado.addEventListener("click", () => {
-  mensajeEspera.remove();
-  textoNuevo.remove();
-  crearMensaje(encriptarMensaje(entradaTexto.value));
-  entradaTexto.value = "";
+  if (entradaTexto.value === "") {
+    alert("No has escrito nada aún");
+    throw new Error("No hay ningún mensaje");
+  } else {
+    mensajeEspera.remove();
+    textoNuevo.remove();
+    crearMensaje(encriptarMensaje(entradaTexto.value));
+    entradaTexto.value = "";
+  }
 })
 
 btnDesencriptado.addEventListener("click", () => {
-  mensajeEspera.remove();
-  textoNuevo.remove();
-  crearMensaje(desencriptarMensaje(entradaTexto.value));
-  entradaTexto.value = "";
+  if (entradaTexto.value === "") {
+    alert("No has escrito nada aún");
+    throw new Error("No hay ningún mensaje");
+  } else {
+    mensajeEspera.remove();
+    textoNuevo.remove();
+    crearMensaje(desencriptarMensaje(entradaTexto.value));
+    entradaTexto.value = "";
+  }
 })
 
 btnCopiar.addEventListener("click", () => {
@@ -34,7 +43,7 @@ btnCopiar.addEventListener("click", () => {
 const crearMensaje = (func) => {
   textoNuevo.classList.add("salida__resultado-texto");
   textoNuevo.textContent = func;
-  areaMensaje.append(textoNuevo);
+  resultadoTexto.append(textoNuevo);
 }
 
 const encriptarMensaje = (mensaje) => {
