@@ -159,3 +159,24 @@ body {
   position: absolute;
   bottom: 0;
 }
+
+@media (width >= 768px) {
+  .contenido {
+   width: 70%; 
+  }
+  .btn-contenedor {
+    justify-content: space-around;
+  }
+}
+
+@media (width >= 1024px) {
+  .contenido {
+    width: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  .contenido {
+    width: 90%;
+  }
+}

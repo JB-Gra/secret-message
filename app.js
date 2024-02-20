@@ -24,8 +24,9 @@ btnDesencriptado.addEventListener("click", () => {
 btnCopiar.addEventListener("click", () => {
   let texto = textoNuevo.textContent;
   navigator.clipboard.writeText(`${texto}`).then(() => {
-    console.log("¡Texto copiado!");
+    alert("¡Texto copiado!");
   }, () => {
+    alert("¡Vaya! Falló el copiado");
     console.error("Hubo un error al copiar");
   })
 })
@@ -44,7 +45,7 @@ const encriptarMensaje = (mensaje) => {
     "o": "ober",
     "u": "ufat"
   }
-  const mensajeEncriptado = mensaje.replace(/(a|e|i|o|u)/g, (vocal) => {
+  const mensajeEncriptado = mensaje.toLowerCase().replace(/(a|e|i|o|u)/g, (vocal) => {
     return vocales[vocal];
   })
   return mensajeEncriptado;
@@ -58,7 +59,7 @@ const desencriptarMensaje = (mensaje) => {
     "ober": "o",
     "ufat": "u",
   }
-  const mensajeDesencriptado = mensaje.replace(/(ai|enter|imes|ober|ufat)/g, (frase) => {
+  const mensajeDesencriptado = mensaje.toLowerCase().replace(/(ai|enter|imes|ober|ufat)/g, (frase) => {
     return encriptado[frase];
   })
   return mensajeDesencriptado;
