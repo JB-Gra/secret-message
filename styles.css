@@ -100,7 +100,7 @@ body {
 }
 
 .btn {
-  width: 9rem;
+  width: 9.75rem;
   height: 3rem;
   background: var(--main-highlight-color);
   font-size: 1.25rem;
@@ -151,7 +151,7 @@ body {
   margin-top: 1rem;
   background: var(--third-bg-color);
   color: var(--main-bg-color);
-  overflow: scroll;
+  overflow: auto;
 }
 
 .pie-pagina {
