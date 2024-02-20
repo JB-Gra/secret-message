@@ -110,6 +110,10 @@ body {
   border-radius: 12px;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .salida__descripcion {
   text-align: center;
   font-weight: 600;

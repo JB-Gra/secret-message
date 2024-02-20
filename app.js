@@ -32,12 +32,16 @@ btnDesencriptado.addEventListener("click", () => {
 
 btnCopiar.addEventListener("click", () => {
   let texto = textoNuevo.textContent;
-  navigator.clipboard.writeText(`${texto}`).then(() => {
-    alert("¡Texto copiado!");
-  }, () => {
-    alert("¡Vaya! Falló el copiado");
-    console.error("Hubo un error al copiar");
-  })
+  if (texto === "") {
+    alert("Nada que copiar aún");
+  } else {
+    navigator.clipboard.writeText(`${texto}`).then(() => {
+      alert("¡Texto copiado!");
+    }, () => {
+      alert("¡Vaya! Falló el copiado");
+      console.error("Hubo un error al copiar");
+    })
+  }
 })
 
 const crearMensaje = (func) => {
